@@ -18,6 +18,10 @@ outputs:
 runs:
   using: composite
   steps:
+    - name: echo inputs
+      shell: bash
+      run: |
+        echo ${{ inputs.REF_TYPE }} and ${{ inputs.BASE_REF }}
     - name: set env
       id: set-env
       shell: bash
